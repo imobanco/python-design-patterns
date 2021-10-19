@@ -47,7 +47,6 @@ class Promocoes:
 
         return self.sem_promocao(valor)
 
-
 """ Exemplos """
 
 c = Carrinho()

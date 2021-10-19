@@ -11,7 +11,7 @@ A loja possui duas promoções:
 python chain-of-responsibility/loja.py  
 ```
 
-###Fontes:
+### Fontes:
 - https://refactoring.guru/pt-br/design-patterns/chain-of-responsibility
 
 - https://www.youtube.com/watch?v=fG5pYDVm8_M
