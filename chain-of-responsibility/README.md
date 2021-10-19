@@ -6,6 +6,9 @@ A loja possui duas promoções:
 - 10% quando o carrinho possuir mais de 5 itens.
 - 30% quando o valor total em compra do carrinho for acima de 1000
 
+Ao processar o calculo final da compra o pedido passará pelos handlers(promoções), que decidirão 
+se vão dar uma resposta para o pedido ou não, caso não, o pedido será passado para o próximo handler.
+
 ## Para rodar os exemplos:
 ``` 
 python chain-of-responsibility/loja.py  
