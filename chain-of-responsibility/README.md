@@ -1,5 +1,5 @@
 # Chain of Responsibility
-O Chain of Responsibility é um padrão de projeto comportamental que permite que você passe pedidos por uma corrente de handlers. Ao receber um pedido, cada handler decide se processa o pedido ou o passa adiante para o próximo handler na corrente.
+De acordo com o Refactoring Guru o Chain of Responsibility é um padrão de projeto comportamental que permite que você passe pedidos por uma corrente de handlers. Ao receber um pedido, cada handler decide se processa o pedido ou o passa adiante para o próximo handler na corrente.
 
 Foi usado como exemplo uma loja que possui carrinho e itens para serem adicionados ao carrinho.
 A loja possui duas promoções:
