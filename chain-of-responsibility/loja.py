@@ -19,6 +19,7 @@ class Carrinho:
     def valor(self):
         return sum(map(lambda item: item.valor, self.itens))
 
+""" Handlers: Onde vai ser decidido se a operação acaba ou não """
 def promocao_30(carrinho: Carrinho):
     if carrinho.valor > 1000:
         return carrinho.valor - (carrinho.valor * 0.3)
@@ -30,18 +31,24 @@ def promocao_10(carrinho: Carrinho):
 def sem_promocao(carrinho: Carrinho):
     return carrinho.valor
 
-# Handler
 class Promocoes:
     def __init__(self, *promos: Callable):
         self.promos = promos
         self.sem_promocao = sem_promocao
 
     def calcular(self, valor: int):
+        """
+        Calcular faz o trabalho parecido com set_next,
+        passando de uma promoção (handler) para outra
+        """
         for promo in self.promos:
             if (resultado := promo(valor)):
                 return resultado
 
         return self.sem_promocao(valor)
+
+
+""" Exemplos """
 
 c = Carrinho()
 
