@@ -44,8 +44,10 @@ class Promocoes:
         passando de uma promoção (handler) para outra
         """
         for promo in self.promos:
-            if (resultado := promo(valor)):
-                return resultado
+            try:
+                 return promo(valor)
+            except ValueError:
+                 pass
 
         return self.sem_promocao(valor)
 
