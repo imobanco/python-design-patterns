@@ -55,7 +55,7 @@ class Promocoes:
 
 c = Carrinho()
 
-p = Promocoes(promocao_30, promocao_10)
+p = Promocoes(promocao_30, promocao_10, sem_promocao)
 
 c.adicionar_item(Item('banana', 10))
 c.adicionar_item(Item('banana', 10))
