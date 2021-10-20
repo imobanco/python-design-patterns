@@ -11,7 +11,7 @@ se vão dar uma resposta para o pedido ou não, caso não, o pedido será passad
 
 ## Para rodar os exemplos:
 ``` 
-python chain-of-responsibility/loja.py  
+python chain-of-responsibility/loja1.py  
 ```
 
 ### Fontes:
