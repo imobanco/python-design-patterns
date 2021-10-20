@@ -23,10 +23,12 @@ class Carrinho:
 def promocao_30(carrinho: Carrinho):
     if carrinho.valor > 1000:
         return carrinho.valor - (carrinho.valor * 0.3)
+    raise ValueError("Promoção não executada")
 
 def promocao_10(carrinho: Carrinho):
     if len(carrinho.itens) >= 5:
         return carrinho.valor - (carrinho.valor * 0.10)
+    raise ValueError("Promoção não executada")
 
 def sem_promocao(carrinho: Carrinho):
     return carrinho.valor
