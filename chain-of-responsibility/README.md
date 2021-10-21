@@ -12,9 +12,10 @@ se vão dar uma resposta para o pedido ou não, caso não, o pedido será passad
 ## Para rodar os exemplos:
 ``` 
 python chain-of-responsibility/loja1.py  
+python chain-of-responsibility/loja2.py  
 ```
 
-### Fontes:
+### Referências:
 - https://refactoring.guru/pt-br/design-patterns/chain-of-responsibility
 
 - https://www.youtube.com/watch?v=fG5pYDVm8_M
