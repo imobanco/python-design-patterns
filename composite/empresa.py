@@ -1,8 +1,3 @@
-from __future__ import annotations
-from abc import ABC, abstractmethod
-from typing import List
-
-
 class Funcionario:
     """Classe que representa a Folha da árvore hierárquica."""
     def __init__(self, nome):
