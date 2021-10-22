@@ -25,8 +25,8 @@ class Empresa:
         self._children = []
         self.nome = nome
 
-    def add(self, departamento:Departamento):
-        self._children.append(departamento)
+    def add(self, departamento_ou_funcionario):
+        self._children.append(departamento_ou_funcionario)
 
 
 
