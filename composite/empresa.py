@@ -12,8 +12,8 @@ class Departamento:
         self.nome = nome
         self._children = []
 
-    def add(self, funcionario:Funcionario):
-        self._children.append(funcionario)
+    def add(self, funcionario_ou_departamento):
+        self._children.append(funcionario_ou_departamento)
 
     def __repr__(self):
         return self._children
