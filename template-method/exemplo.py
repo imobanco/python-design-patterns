@@ -1,41 +1,39 @@
-class Animal:
-    def __init__(self, nome):
-        self.nome = nome
+from abc import ABC, abstractmethod
 
-    def __repr__(self):
-        return self.nome
+class PrepararBebida(ABC):
+    def preparar_bebida(self):
+        print(self.aquecer_agua())
+        print(self.adicionar_mistura())
+        print(self.colocar_no_copo())
 
-class Pelo(Animal):
-    def __init__(self, tipo, tamanho):
-        self.tipo = tipo
-        self.tamanho = tamanho
+    def aquecer_agua(self):
+        return ("aquecendo agua")
 
-    def __repr__(self):
-        return self.tipo
+    @abstractmethod
+    def adicionar_mistura(self):
+        pass
 
-class Falar(Animal):
-    def __init__(self, fala):
-        self.fala = fala
-
-    def __repr__(self):
-        return (f"{Animal}:{self.fala}")
-
-class Patas(Animal):
-    def __init__(self, quantidade):
-        self.quantidade = quantidade
-    def __repr__(self):
-        return self.quantidade
-
-class Cor(Animal):
-    def __init__(self, cor):
-        self.cor = cor
-
-    def __repr__(self):
-        return self.cor
+    def colocar_no_copo(self):
+        return ("colocando no copo")
 
 
+class Cafe(PrepararBebida):
+    def adicionar_mistura(self):
+        return ("adicionando Café")
+
+class Cha(PrepararBebida):
+    def adicionar_mistura(self):
+        return ("adicionar chá")
+
+class Chocolate(PrepararBebida):
+    def adicionar_mistura(self):
+        return ("adicionar chocolate")
 
 
-cachorro = Animal(nome="Cachorro")
+cafe = Cafe()
+cafe.preparar_bebida()
 
-fala = Falar(cachorro)
+print("---------------------")
+
+cha = Cha()
+cha.preparar_bebida()
