@@ -44,7 +44,7 @@ print("valor da entrega:", Entrega().calcular_valor(pedido2))
 print("Exemplo com entrega que nao existe")
 pedido3 = Pedido(valor=500, tipo_entrega="errada")
 print(f"valor do pedido:{pedido3.valor}, tipo de entrega: {pedido3.tipo_entrega}")
-Entrega().calcular_valor(pedido3)
+print("valor da entrega:", Entrega().calcular_valor(pedido3))
 
 print("Exemplo com entrega normal")
 pedido4 = Pedido(valor=500, tipo_entrega="normal")
