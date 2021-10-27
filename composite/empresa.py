@@ -7,7 +7,7 @@ class Funcionario:
         return self.nome
 
 class Departamento:
-    """ Classe que representa componentes complexos que podem ter folhas."""
+    """ Classe que representa o Galho da árvore hierárquica que podem ter folhas."""
     def __init__(self, nome):
         self.nome = nome
         self._children = []
