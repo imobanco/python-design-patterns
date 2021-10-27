@@ -8,7 +8,7 @@ class Pedido:
 
 
 class Entrega:
-    def calcular(self, pedido, entrega):
+    def calcular_valor(self, pedido, entrega):
         total = entrega.calcular(pedido)
         print(total)
 
@@ -23,5 +23,5 @@ class Rapida:
 
 pedido = Pedido(500)
 
-Entrega().calcular(pedido, Normal())
-Entrega().calcular(pedido, Rapida())
+Entrega().calcular_valor(pedido, Normal())
+Entrega().calcular_valor(pedido, Rapida())
