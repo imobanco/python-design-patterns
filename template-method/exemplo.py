@@ -37,3 +37,8 @@ print("---------------------")
 
 cha = Cha()
 cha.preparar_bebida()
+
+print("---------------------")
+
+chocolate = Chocolate()
+chocolate.preparar_bebida()
