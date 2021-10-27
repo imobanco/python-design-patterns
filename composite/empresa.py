@@ -14,6 +14,7 @@ class Departamento:
 
     def add(self, funcionario_ou_departamento):
         self._children.append(funcionario_ou_departamento)
+        print(f"{funcionario_ou_departamento.nome} entrou para o departamento {self.nome}!")
 
     def __repr__(self):
         return self._children
@@ -27,38 +28,39 @@ class Empresa:
 
     def add(self, departamento_ou_funcionario):
         self._children.append(departamento_ou_funcionario)
-
-
+        print(f"{departamento_ou_funcionario.nome} entrou para a empresa {self.nome}!")
 
 print ("--Exemplo--")
-
+print("adicionando funcionários ao departamento de RH")
 f1 = Funcionario(nome="Ana")
 f2 = Funcionario(nome="Maria")
 f3 = Funcionario(nome="Luiz")
 d1 = Departamento(nome="RH")
-
-print(f"três funcionários {f1.nome, f2.nome, f3.nome} do departamento {d1.nome}")
-
 d1.add(f1)
 d1.add(f2)
 d1.add(f3)
-
 f4 = Funcionario(nome="Cesar")
 f5 = Funcionario(nome="Wilson")
 f6 = Funcionario(nome="Luiza")
-
 d2 = Departamento(nome="TI")
-
-print(f"três funcionários {f4.nome, f5.nome, f6.nome} do departamento {d2.nome}")
-
+print("------------")
+print("adicionando funcionários ao departamento de TI")
 d2.add(f4)
 d2.add(f5)
 d2.add(f6)
-
-
+print("------------")
+print("adicionando os departamentos a empresa")
 e1 = Empresa(nome="Imobanco")
-
 e1.add(d1)
 e1.add(d2)
+print("------------")
+print("adicionando os funcionarios diretamente a empresa")
+f7 = Funcionario(nome="Dexter")
+f8 = Funcionario(nome="Leticia")
+e1.add(f7)
+e1.add(f8)
+print("------------")
+print("adicionando um departamento a outro departamento")
+d3 = Departamento(nome="Design")
+d2.add(d3)
 
-print(f"Os dois departamentos {d1.nome, d2.nome} pertecem a empresa {e1.nome}")
