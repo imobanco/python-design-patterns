@@ -19,7 +19,7 @@ class Departamento:
         return self._children
 
 class Empresa:
-    """ Classe que representa componentes complexos que podem ter folhas."""
+    """ Classe que representa o Tronco da árvore hierárquica quem pode ter galhos ou folhas."""
 
     def __init__(self, nome):
         self._children = []
