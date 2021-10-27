@@ -34,7 +34,7 @@ class Rapida:
 print("Exemplo com entrega rapida")
 pedido1 = Pedido(valor=500, tipo_entrega="rapida")
 print(f"valor do pedido:{pedido1.valor}, tipo de entrega: {pedido1.tipo_entrega}")
-Entrega().calcular_valor(pedido1)
+print("valor da entrega:", Entrega().calcular_valor(pedido1))
 
 print("Exemplo com entrega não especificada")
 pedido2 = Pedido(valor=500)
