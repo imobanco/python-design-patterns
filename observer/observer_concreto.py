@@ -15,7 +15,7 @@ class Centauro:
         for observador in self._observers:
             observador.atualizar(mensagem)
 
-class Unicornio:
+class Unicornio(Observador):
     def __init__(self):
         self._observers = []
 
