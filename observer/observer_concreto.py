@@ -1,6 +1,6 @@
 from observer_abc import Observador, Observavel
 
-class BolaDeCristal:
+class BolaDeCristal(Observavel):
     def atualizar(self, mensagem):
         print(f"Fausto está na escola, mas recebeu a mensagem: {mensagem}")
 
