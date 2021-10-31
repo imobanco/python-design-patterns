@@ -1,16 +1,12 @@
 from abc import ABC, abstractmethod, abstractproperty
 from typing import List
 
-class Observador(ABC):
+class Observavel(ABC):
     """Feitiço para objetos que querem ser observados."""
 
     @abstractmethod
     def atualizar(self):
         ...
-
-
-class Observavel(ABC):
-    """Feitiço observar objetos observáveis."""
 
     @property
     @abstractmethod
@@ -23,4 +19,11 @@ class Observavel(ABC):
 
     @abstractmethod
     def notificar_observers(self, mensagem):
+        ...
+
+class Observador(ABC):
+    """Súditos que observam algo!""""
+
+    @abstractmethod
+    def receber_notificacao(self, mensagem):
         ...
