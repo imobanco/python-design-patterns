@@ -5,7 +5,7 @@ Memento é um design patter comportamental que permite fazer snapshots instantâ
 de um objeto e restaurá-los no futuro.
 
 O Memento não compromete a estrutura interna do objeto com o qual trabalha, bem como os dados 
-mantidos dentro dss snapshots.
+mantidos dentro dos snapshots.
 
 Exemplos de uso: o princípio do Memento pode ser alcançado usando a serialização, que é bastante
 comum em Python. Embora não seja a única e mais eficiente maneira de fazer snapshots do 
