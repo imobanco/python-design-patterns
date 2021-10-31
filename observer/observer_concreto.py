@@ -4,7 +4,7 @@ class BolaDeCristal:
     def atualizar(self, mensagem):
         print(f"Fausto está na escola, mas recebeu a mensagem: {mensagem}")
 
-class Centauro:
+class Centauro(Observador):
     def __init__(self):
         self._observers = []
 
