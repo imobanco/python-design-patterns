@@ -17,9 +17,11 @@ class FalaAdapter:
 
     def __init__(self, ser, *, falar):
         self.ser = ser
-        metodo_de_fala = getattr(self.ser, falar)
-        self.__setattr__('falar', metodo_de_fala)
-
+        self.nome_metodo_de_fala = falar
+        
+    def falar(self):
+        metodo_de_fala = getattr(self.ser, self.nome_metodo_de_fala)
+        return metodo_de_fala()
 
 seres_adapters = [
     FalaAdapter(Bruxo(), falar='bruxeis'),
